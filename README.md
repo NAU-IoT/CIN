@@ -1,6 +1,6 @@
-## Authors
+Authors
+[Akiel Aries](https://www.github.com/aba275)
 
-- [Akiel Aries](https://www.github.com/aba275)
 # Introduction
 This repository contains code that transmits values read 
 from these sensors :
