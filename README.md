@@ -52,6 +52,8 @@ Clone the repository and build from the Dockerimage:
 
     $ cd climate_indicator_proj
     $ docker build --rm -t climate_indicator_proj .  
+*Todo:*
+
 
 # How to Contribute to this project...
 #### *Todo:*
