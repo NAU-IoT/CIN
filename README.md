@@ -36,8 +36,8 @@ transmitted from the host microcontroller(D1 Mini Pro)
 to the raspberry pi that will store these values.
 
 
-#### Schematic Coming Soon...
-#### *Todo:*
+#### Schematic 
+[https://github.com/NAU-IoT/CIP_prod/blob/main/img/CIP_schematic_v1.png]
 
 #### End goal of this project
 Idea is to use the ATMEGA2560 as a host microcontroller
