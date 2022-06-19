@@ -12,6 +12,7 @@ InfluxDB hosted on an RPI 4 with additional peripherals to be added.
 - BME280 Temp, Hum., Press.
 - DS18B20 Liquid Sensor     (can be used for measuring ground temp)
 - ~~SHT30 Temp & Hum.~~     **(*redundant but maybe good for veryfing other peripheral readings*)**
+    - Using SHT30 (x2) for testing communication over I2C vs SCI
 
 Additional peripherals will include :
 
