@@ -37,7 +37,8 @@ to the raspberry pi that will store these values.
 
 
 #### Schematic 
-[https://github.com/NAU-IoT/CIP_prod/blob/main/img/CIP_schematic_v1.png]
+![CIP_schematic_v1](https://user-images.githubusercontent.com/56521583/174503290-b4ae63b7-09a6-4bef-abdc-76ad19847dcb.png)
+
 
 #### End goal of this project
 Idea is to use the ATMEGA2560 as a host microcontroller
