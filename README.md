@@ -1,3 +1,5 @@
+Repository for Climate Indicator Node done for the Northern Arizona University Internet of Things (IoT) team.
+
 Authors
 [Akiel Aries](https://www.github.com/aba275)
 
