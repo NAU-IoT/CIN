@@ -41,7 +41,7 @@ to the raspberry pi that will store these values.
 
 
 #### Schematic 
-![CIP_schematic_v2](https://github.com/NAU-IoT/CIP_prod/blob/main/img/CIP_perfboard_schem.png)
+![CIP_schematic_v2](https://github.com/NAU-IoT/CIP_prod/blob/main/img/CIP_schematic_v2.png)
 
 
 #### End goal of this project
