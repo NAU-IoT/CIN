@@ -71,12 +71,12 @@ Clone the repository and build from the Dockerimage:
 #### *Todo:*
 
 ### Potential & Forseeable complications with future implementations
-- Using the Arduino psuedo C/C++ code and lackluster IDE uses more memory
+- Using the Arduino C/C++ code and lackluster IDE uses more memory
 than bare metal C alongside AVR-GCC compiler or ESP equivalent.
-- With recent discover of Arduino Yun Rev 2 w/ ATMEGA32u4 chip alongside
-a Atheros AR9331 chip with ethernet & wireless capabilities, this could eliminate
+- With recent discovery of Arduino Yun Rev 2 (ATMEGA32u4 chip alongside
+a Atheros AR9331 with ethernet & wireless capabilities) this could eliminate
 needing to use the underpowered D1 Mini Pro as a host device or needing to siphon off
-connections for wireless.
+connections for wireless on more suitable device like the ATMEGA2560.
     - will use the D1 as a voltage reader of the project and publish those values as a
     seperate MQTT topic.
 - can use the beaglebone as a subscriber device to host values like the RPI 
