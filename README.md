@@ -1,4 +1,6 @@
-Repository for Climate Indicator Node done for the Northern Arizona University Internet of Things (IoT) team.
+Repository for Climate Indicator Node done for the Northern Arizona University Internet of Things (IoT) team <br>
+> :warning: *Development is done in a private repository synced among a few different development environments. The 
+private-facing repo is many commits ahead of this public facing one!*
 
 Authors
 [Akiel Aries](https://www.github.com/aba275)
@@ -18,7 +20,7 @@ Additional peripherals will include :
 
 - CO2 & Air Quality Sensor (CCS811 CO2 & Air Qual)
 - Adafruit Anemometer 
-- Host MCU & BME280 w/ STEMM QT soil sensor
+- Host MCU & BME280 w/ STEMMA QT soil sensor
 
 ## Repo Details
 #### ATMEGA2560
@@ -45,7 +47,7 @@ to the raspberry pi that will store these values.
 
 
 #### End goal of this project
-Idea is to use the ATMEGA32U4 (W/ Atheros AR9331 chip) as a host 
+Idea is to use the D1 Mini Pro (potentially a more powerful wifi-capable device) as a host 
 microcontroller connected to various peripherals to read and publishing values. 
 The values will be published via MQTT and fed into an instance of InfluxDB hosted 
 on a RPI 4. The data can be visualized in a number of way (will likely go with 
@@ -72,7 +74,8 @@ Clone the repository and build from the Dockerimage:
 
 ### Potential & Forseeable complications with future implementations
 - Using the Arduino C/C++ code and lackluster IDE uses more memory
-than bare metal C alongside AVR-GCC compiler or ESP equivalent.
+than bare metal C alongside AVR-GCC compiler or ESP equivalent. This is
+a steep learning curve involving intermediate or advanced knowledge of bit-banging.
 - With recent discovery of Arduino Yun Rev 2 (ATMEGA32u4 chip alongside
 a Atheros AR9331 with ethernet & wireless capabilities) this could eliminate
 needing to use the underpowered D1 Mini Pro as a host device or needing to siphon off
