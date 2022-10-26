@@ -57,6 +57,34 @@ Final result will contain necessary peripherals on a Printed Circuit Board (PCB)
 
 # Dependencies
 #### *Todo*
+#### MQTT
+```
+# install the MQTT dependencies
+$ sudo apt-get install mosquitto
+$ sudo apt-get install mosquitto-clients
+
+# Python MQTT client
+$ pip3 install paho-mqtt
+```
+#### InfluxDB
+```
+# install InfluxDB dependencies
+$ sudo apt install influxdb
+$ sudo apt install influxdb-client
+$ pip3 install influxdb
+
+# start InfluxDB service
+$ sudo service influxdb start
+# check status
+$ sudo service influxdb status
+
+# edit configuration file and enable HTTP endpoint
+$ sudo vim /etc/influxdb/influxdb.conf
+# restart service
+$ sudo service influxdb restart
+# open InfluxDB
+$ influxdb
+```
 
 # Build
 *Explain how to build this project. Want this to be
