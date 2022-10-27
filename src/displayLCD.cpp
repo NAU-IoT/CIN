@@ -4,9 +4,9 @@
 */ 
 #include <Adafruit_BME280.h>
 #include <LiquidCrystal_I2C.h>
-#include "BME280.h"
-#include "displayLCD.h"
-#include "constants.h"
+#include "BME280.hpp"
+#include "displayLCD.hpp"
+#include "constants.hpp"
 
 
 #define SEALEVELPRESSURE_HPA (1013.25)

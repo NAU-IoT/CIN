@@ -2,8 +2,8 @@
  * library created to test library usage with arduino 
  * BME280 sensor
  */
-#ifndef BME280_h
-#define BME280_h
+#ifndef BME280_hpp
+#define BME280_hpp
 
 #include <Arduino.h>
 

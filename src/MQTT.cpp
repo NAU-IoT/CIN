@@ -5,8 +5,8 @@
 
 #include <ESP8266WiFi.h>
 #include "PubSubClient.h"
-#include "MQTT.h"
-#include "constants.h"
+#include "MQTT.hpp"
+#include "constants.hpp"
 
 // initialize wifi and mqtt objects
 WiFiClient wifiClient;

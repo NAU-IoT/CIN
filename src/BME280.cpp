@@ -4,8 +4,8 @@
  */
 
 #include <Adafruit_BME280.h>
-#include "BME280.h"
-#include "constants.h"
+#include "BME280.hpp"
+#include "constants.hpp"
 
 // declare instance of bme sensor
 Adafruit_BME280 bme;

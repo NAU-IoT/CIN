@@ -3,8 +3,8 @@
 * display sensor values to connect LCD screen
 */
 
-#ifndef displayLCD_h
-#define displayLCD_h
+#ifndef displayLCD_hpp
+#define displayLCD_hpp
 
 class LCD {
     public:
