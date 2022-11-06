@@ -31,7 +31,7 @@
 * define hex addresses for I2C protocol 
 * for data & clock communication
 */
-#define SHT_ADDR (0x44)
+#define SHT_ADDR (0x45)
 #define BME_ADDR (0x77)
 #define LCD_ADDR (0x27)
 
