@@ -28,7 +28,6 @@
  *          instead things must be declared in setup and again in loop in 
  *          order for loop to use whatever was declared
  */
-
 #include <Arduino.h>
 /*
 * locally developed headers; PubSubClient is external lib
@@ -36,23 +35,27 @@
 */
 #include "PubSubClient.h"
 #include "BME280.hpp"
+#include "SHT30.hpp"
 #include "displayLCD.hpp"
 #include "constants.hpp"
+#include "MQTT.hpp"
+// #include "DS18B20.hpp"
 
-//#include "DS18B20.h"
-
+// fourth working version of this project
 #define VERSION 4
-// define LCD with I2C addr and dimension
-LCD a(0x27, 16, 02);
-BME b(0x77);
 
 // initialize different peripherals here
 void setup() {
     // set baud rate
     Serial.begin(9600);
-  
+    
+    // initialize LCD in setup function
+    LCD a(LCD_ADDR, 16, 02);
     a.initializeLCD();
 
+    //MQTT c;    
+    //c.connect_MQTT();
+    
     /*  for LED visual error checking initialize
      *  - RED
      *  - YELLOW
@@ -60,30 +63,45 @@ void setup() {
      *  - GREEN 
      *  HIGH = ON
      *  LOW = OFF
-     */
+     
     pinMode(8, OUTPUT);
     pinMode(9, OUTPUT);
     pinMode(10, OUTPUT);
     pinMode(11, OUTPUT);
-    digitalWrite(8, HIGH);
-    digitalWrite(9, HIGH);
     digitalWrite(10, HIGH);
-    digitalWrite(11, HIGH);
-    
+    */
 }
 
 // loop thru given functions to display sensor vals
 void loop() {  
-    // printToLCD function for our sensors  
-    //LCD a(0x27, 16, 02);
-    a.main();
-    Serial.println("De-Bug");
-    // declare BME sensors I2C address and call theprintToSerial function
-    //BME b(0x77);
-    b.printBMEToSerial();
+    /* 
+     *  since arduino only allows calling one function at a time
+     *  we will be playing with the delay() functions and only
+     *  calling them in the displayLCD.cpp file
+     */  
+     
+    // initialize LCD and call displayToLCD from displayLCD.cpp that 
+    // prints values to our display
+
+    // look into setup initializing things for loop()?
+    // arduino refresher on functionality of setup() & loop()
+    // mutex locks in arduino
+    LCD a(LCD_ADDR, 16, 02);
+    a.displayToLCD();
+
+    // declare BME sensors I2C address and call the printToSerial function
+    BME b(BME_ADDR);
+    b.collect();
+
+    SHT c(SHT_ADDR);
+    c.collect();
+
+    // publish data to MQTT with call from MQTT.cpp
+    //MQTT c;    
+    //c.publish_MQTT(); 
+    //PubSubClient client(mqtt_server, 1883, wifiClient);
+    //c.connect_MQTT();
+    //client.publish("Hello World!");
     
-    // printToSerial function for DS18B20 sensor
-   
-    delay(1000);
-  
+    //delay(1000);
 }
