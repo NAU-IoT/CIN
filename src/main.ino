@@ -80,28 +80,23 @@ void loop() {
      *  calling them in the displayLCD.cpp file
      */  
      
-    // initialize LCD and call displayToLCD from displayLCD.cpp that 
-    // prints values to our display
-
-    // look into setup initializing things for loop()?
-    // arduino refresher on functionality of setup() & loop()
-    // mutex locks in arduino
+    // print to LCD
     LCD a(LCD_ADDR, 16, 02);
     a.displayToLCD();
 
     // declare BME sensors I2C address and call the printToSerial function
-    BME b(BME_ADDR);
-    b.collect();
+    // BME b(BME_ADDR);
+    // b.collect();
 
-    SHT c(SHT_ADDR);
-    c.collect();
+    // declare SHT sensor w/ I2C addr
+    // SHT c(SHT_ADDR);
+    // c.collect();
 
     // publish data to MQTT with call from MQTT.cpp
-    //MQTT c;    
-    //c.publish_MQTT(); 
-    //PubSubClient client(mqtt_server, 1883, wifiClient);
+    MQTT d(BME_ADDR);    
+    // d.connect_MQTT();
+    d.publish_MQTT(); 
     //c.connect_MQTT();
-    //client.publish("Hello World!");
     
     //delay(1000);
 }
