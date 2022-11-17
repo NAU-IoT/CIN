@@ -57,14 +57,15 @@ Final result will contain necessary peripherals on a Printed Circuit Board (PCB)
 
 # Dependencies
 #### *Todo*
-#### MQTT
-```
-# install the MQTT dependencies
-$ sudo apt-get install mosquitto
-$ sudo apt-get install mosquitto-clients
 
-# Python MQTT client
-$ pip3 install paho-mqtt
+For python dependencies: 
+```
+# install pip (python pkg manager)
+$ sudo apt install python3-pip
+# verify install
+$ pip --version
+# install dependencies from requirements.txt
+$ pip install -r requirements.txt
 ```
 #### InfluxDB
 ```
