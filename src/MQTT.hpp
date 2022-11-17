@@ -3,12 +3,14 @@
  * with C++
  */
 
- #ifndef MQTT_h
- #define MQTT_h
+#ifndef MQTT_hpp
+#define MQTT_hpp
 
-void connect_MQTT();
+class MQTT {
+    public:
+        MQTT(int BMEaddr);
+        void connect_MQTT();
+        void publish_MQTT();
+};
 
-
-
-
- #endif
+#endif
